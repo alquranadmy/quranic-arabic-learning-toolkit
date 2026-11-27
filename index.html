@@ -1,1 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#123b32">
+<meta name="description" content="A bilingual open-source platform for learning Quranic Arabic, Sarf, Nahw and I'rab.">
 
+<title>Quranic Arabic Learning Toolkit</title>
+
+<style>
+:root {
+  --green: #123b32;
+  --green2: #1c5143;
+  --gold: #c5a15a;
+  --cream: #f8f6ef;
+  --white: #ffffff;
+  --text: #26352f;
+  --muted: #69756f;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, Arial, sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+header {
+  background: var(--green);
+  color: white;
+  padding: 18px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.brand {
+  font-size: 19px;
+  font-weight: 750;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-weight: 650;
+  font-size: 14px;
+}
+
+.language {
+  background: var(--gold);
+  color: #172c24;
+}
+
+.hero {
+  background: linear-gradient(135deg, #123b32, #24634e);
+  color: white;
+  text-align: center;
+  padding: 75px 20px 85px;
+}
+
+.hero .arabic {
+  font-family: "Noto Naskh Arabic", serif;
+  font-size: clamp(30px, 6vw, 52px);
+  color: #e9d5a1;
+  margin-bottom: 15px;
+}
+
+.hero h1 {
+  font-size: clamp(27px, 5vw, 43px);
+  margin: 8px 0;
+}
+
+.hero p {
+  max-width: 650px;
+  margin: 15px auto 25px;
+  color: #e4eee8;
+}
+
+.primary {
+  background: var(--gold);
+  color: #18392f;
+  padding: 13px 23px;
+}
+
+section {
+  padding: 55px 7%;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.section-heading h2 {
+  color: var(--green);
+  font-size: 29px;
+  margin-bottom: 5px;
+}
+
+.section-heading p {
+  color: var(--muted);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+  border: 1px solid #e8e4d9;
+  box-shadow: 0 4px 15px rgba(0,0,0,.035);
+}
+
+.card .icon {
+  font-size: 30px;
+}
+
+.card h3 {
+  color: var(--green);
+  margin: 12px 0 5px;
+}
+
+.card p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.card button {
+  background: var(--green);
+  color: white;
+  margin-top: 10px;
+}
+
+.about {
+  background: #eeeadd;
+  text-align: center;
+}
+
+.about p {
+  max-width: 760px;
+  margin: auto;
+}
+
+footer {
+  background: var(--green);
+  color: white;
+  text-align: center;
+  padding: 28px 15px;
+  font-size: 13px;
+}
+
+[dir="rtl"] {
+  text-align: right;
+}
+
+[dir="rtl"] .hero,
+[dir="rtl"] .section-heading,
+[dir="rtl"] .about {
+  text-align: center;
+}
+
+[dir="rtl"] .card {
+  text-align: right;
+}
+
+@media(max-width:600px) {
+  header { justify-content: center; }
+  nav { justify-content: center; }
+  .hero { padding: 55px 18px; }
+  section { padding: 40px 18px; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="brand">📖 Quranic Arabic Toolkit</div>
+
+  <nav>
+    <a href="#home" data-en="Home" data-bn="হোম">Home</a>
+    <a href="#modules" data-en="Learning Modules" data-bn="শিক্ষা মডিউল">Learning Modules</a>
+    <a href="#about" data-en="About" data-bn="পরিচিতি">About</a>
+
+    <button class="language" onclick="toggleLanguage()">
+      বাংলা
+    </button>
+  </nav>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+  <div class="arabic" dir="rtl">لِتَعَلَّمِ الْعَرَبِيَّةِ الْقُرْآنِيَّةِ</div>
+
+  <h1 data-en="Understand the Language of the Quran"
+      data-bn="কুরআনের ভাষা বুঝুন">
+    Understand the Language of the Quran
+  </h1>
+
+  <p data-en="Learn Quranic vocabulary, Arabic grammar, Sarf, Nahw and I'rab through structured bilingual learning resources."
+     data-bn="কাঠামোবদ্ধ দ্বিভাষিক শিক্ষার মাধ্যমে কুরআনিক শব্দভাণ্ডার, আরবি সরফ, নাহু ও ই'রাব শিখুন।">
+    Learn Quranic vocabulary, Arabic grammar, Sarf, Nahw and I'rab through structured bilingual learning resources.
+  </p>
+
+  <button class="primary"
+          onclick="document.getElementById('modules').scrollIntoView({behavior:'smooth'})"
+          data-en="Explore Learning Modules"
+          data-bn="শিক্ষা মডিউল দেখুন">
+    Explore Learning Modules
+  </button>
+</section>
+
+<section id="modules">
+
+  <div class="section-heading">
+    <h2 data-en="Explore Learning Modules"
+        data-bn="শিক্ষা মডিউলসমূহ">
+      Explore Learning Modules
+    </h2>
+
+    <p data-en="Build your understanding step by step."
+       data-bn="ধাপে ধাপে আপনার জ্ঞান বৃদ্ধি করুন।">
+      Build your understanding step by step.
+    </p>
+  </div>
+
+  <div class="grid">
+
+    <article class="card">
+      <div class="icon">📚</div>
+      <h3 data-en="Quranic Vocabulary"
+          data-bn="কুরআনিক শব্দভাণ্ডার">
+        Quranic Vocabulary
+      </h3>
+      <p data-en="Explore Arabic words, meanings and examples."
+         data-bn="আরবি শব্দ, অর্থ ও উদাহরণ জানুন।">
+        Explore Arabic words, meanings and examples.
+      </p>
+      <button onclick="showMessage('vocabulary')"
+              data-en="Explore"
+              data-bn="দেখুন">Explore</button>
+    </article>
+
+    <article class="card">
+      <div class="icon">✍️</div>
+      <h3 data-en="Sarf (Morphology)"
+          data-bn="সরফ (শব্দরূপ)">
+        Sarf (Morphology)
+      </h3>
+      <p data-en="Understand Arabic word structures and patterns."
+         data-bn="আরবি শব্দের গঠন ও রূপান্তর বুঝুন।">
+        Understand Arabic word structures and patterns.
+      </p>
+      <button onclick="showMessage('sarf')"
+              data-en="Explore"
+              data-bn="দেখুন">Explore</button>
+    </article>
+
+    <article class="card">
+      <div class="icon">📖</div>
+      <h3 data-en="Nahw (Grammar)"
+          data-bn="নাহু (ব্যাকরণ)">
+        Nahw (Grammar)
+      </h3>
+      <p data-en="Learn Arabic syntax and grammatical rules."
+         data-bn="আরবি বাক্যগঠন ও ব্যাকরণ শিখুন।">
+        Learn Arabic syntax and grammatical rules.
+      </p>
+      <button onclick="showMessage('nahw')"
+              data-en="Explore"
+              data-bn="দেখুন">Explore</button>
+    </article>
+
+    <article class="card">
+      <div class="icon">🔍</div>
+      <h3 data-en="I'rab Analysis"
+          data-bn="ই'রাব বিশ্লেষণ">
+        I'rab Analysis
+      </h3>
+      <p data-en="Understand the grammatical position of Arabic words."
+         data-bn="আরবি শব্দের বাক্যগত অবস্থান বিশ্লেষণ করুন।">
+        Understand the grammatical position of Arabic words.
+      </p>
+      <button onclick="showMessage('irab')"
+              data-en="Explore"
+              data-bn="দেখুন">Explore</button>
+    </article>
+
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="section-heading">
+    <h2 data-en="About This Project"
+        data-bn="প্রকল্প পরিচিতি">
+      About This Project
+    </h2>
+  </div>
+
+  <p data-en="Quranic Arabic Learning Toolkit is an open-source educational project designed to make Quranic Arabic learning more accessible to Bengali and English-speaking learners. The platform is under active development."
+     data-bn="Quranic Arabic Learning Toolkit একটি ওপেন-সোর্স শিক্ষামূলক প্রকল্প। বাংলা ও ইংরেজিভাষী শিক্ষার্থীদের জন্য কুরআনিক আরবি শিক্ষা সহজলভ্য করাই এর উদ্দেশ্য। প্ল্যাটফর্মটি বর্তমানে উন্নয়নাধীন।">
+    Quranic Arabic Learning Toolkit is an open-source educational project designed to make Quranic Arabic learning more accessible to Bengali and English-speaking learners. The platform is under active development.
+  </p>
+</section>
+
+</main>
+
+<footer>
+  <p>Quranic Arabic Learning Toolkit</p>
+  <p data-en="Built for learners. Open to everyone."
+     data-bn="শিক্ষার্থীদের জন্য নির্মিত। সবার জন্য উন্মুক্ত।">
+    Built for learners. Open to everyone.
+  </p>
+  <p>Open-source educational project · 2026</p>
+</footer>
+
+<script>
+let currentLanguage = "en";
+
+function toggleLanguage() {
+  currentLanguage = currentLanguage === "en" ? "bn" : "en";
+
+  document.documentElement.lang = currentLanguage;
+  document.documentElement.dir =
+    currentLanguage === "bn" ? "ltr" : "ltr";
+
+  document.querySelectorAll("[data-en]").forEach(element => {
+    element.textContent =
+      element.dataset[currentLanguage];
+  });
+
+  document.querySelector(".language").textContent =
+    currentLanguage === "en" ? "বাংলা" : "English";
+}
+
+function showMessage(module) {
+  const messages = {
+    vocabulary: {
+      en: "The Quranic Vocabulary module is coming soon!",
+      bn: "কুরআনিক শব্দভাণ্ডার মডিউলটি শীঘ্রই আসছে!"
+    },
+    sarf: {
+      en: "The Sarf module is coming soon!",
+      bn: "সরফ মডিউলটি শীঘ্রই আসছে!"
+    },
+    nahw: {
+      en: "The Nahw module is coming soon!",
+      bn: "নাহু মডিউলটি শীঘ্রই আসছে!"
+    },
+    irab: {
+      en: "The I'rab module is coming soon!",
+      bn: "ই'রাব মডিউলটি শীঘ্রই আসছে!"
+    }
+  };
+
+  alert(messages[module][currentLanguage]);
+}
+</script>
+
+</body>
+  </html>
