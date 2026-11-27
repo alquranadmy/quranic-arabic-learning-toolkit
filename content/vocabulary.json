@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "arabic": "رَبّ",
+    "root": "ر ب ب",
+    "meaning_bn": "প্রতিপালক",
+    "meaning_en": "Lord; Sustainer",
+    "reference": "Al-Fatihah 1:2"
+  },
+  {
+    "id": 2,
+    "arabic": "رَحْمَٰن",
+    "root": "ر ح م",
+    "meaning_bn": "পরম করুণাময়",
+    "meaning_en": "The Most Merciful",
+    "reference": "Al-Fatihah 1:3"
+  },
+  {
+    "id": 3,
+    "arabic": "عَالَمِينَ",
+    "root": "ع ل م",
+    "meaning_bn": "সকল জগৎ",
+    "meaning_en": "All worlds",
+    "reference": "Al-Fatihah 1:2"
+  }
+]
